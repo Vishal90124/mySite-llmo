@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-research",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-26T10:34:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.twistbioscience.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "standard",
+    "purpose": "research-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "photo image + title + category badge + description",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "case study listings",
+      "research article cards",
+      "resource cards with category badges"
+    ],
+    "notSuitableFor": [
+      "product category grids with icons",
+      "press/award sections",
+      "blog featured article layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-26T10:34:00.000Z"
+  }
+}

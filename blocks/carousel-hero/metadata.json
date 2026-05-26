@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-26T10:34:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.twistbioscience.com/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "rotating images + heading + scrolling titles + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections",
+      "landing pages with rotating category content",
+      "pages needing animated image galleries with text overlay"
+    ],
+    "notSuitableFor": [
+      "simple static hero banners",
+      "product detail pages",
+      "text-heavy content pages"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-26T10:34:00.000Z"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.twistbioscience.com/",
+  "path": "index",
+  "timestamp": "2026-05-26T11:02:31.738Z",
+  "title": "Twist Bioscience | We lead innovation in DNA synthesis",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "columns-promo",
+    "cards-product",
+    "columns-feature",
+    "columns-testimonial",
+    "cards-research",
+    "cards-research",
+    "cards-blog",
+    "cards-press",
+    "columns-cta"
+  ]
+}

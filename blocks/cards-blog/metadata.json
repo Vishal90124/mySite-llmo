@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-blog",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-26T10:34:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.twistbioscience.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "purpose": "blog-featured",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "featured article (image + title + date) + recent articles list (title + description + date + thumbnail)",
+    "buttonCount": 1,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog listing sections with featured article",
+      "news/article sections with featured + recent split",
+      "content hub landing pages"
+    ],
+    "notSuitableFor": [
+      "product category grids",
+      "simple uniform card grids",
+      "press/award sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-26T10:34:00.000Z"
+  }
+}
