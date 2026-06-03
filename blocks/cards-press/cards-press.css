@@ -1,27 +1,127 @@
+/* Block: cards-press -- Press & Accolades cards */
+
 .cards-press > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .cards-press > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
-}
-
-.cards-press .cards-press-card-body {
-  margin: 16px;
+  border-radius: 3px;
+  box-shadow: rgb(0 0 0 / 2%) 0 3px 6px 0, rgb(0 0 0 / 3%) 0 3px 6px 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 392px;
 }
 
 .cards-press .cards-press-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 198px;
+  min-height: 198px;
   line-height: 0;
+}
+
+.cards-press .cards-press-card-image picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .cards-press > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cards-press .cards-press-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 20px;
+  flex: 1;
+}
+
+.cards-press .cards-press-card-body p {
+  font-size: 14px;
+  font-family: var(--body-font-family);
+  line-height: 19.6px;
+  color: rgb(74 74 74);
+  margin: 0;
+}
+
+.cards-press .cards-press-card-body p:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--body-font-family);
+  line-height: 23.4px;
+  color: rgb(49 53 56);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cards-press .cards-press-card-body p:nth-child(2) {
+  margin-bottom: 8px;
+}
+
+.cards-press .cards-press-card-body p:last-child {
+  margin-top: auto;
+}
+
+.cards-press .cards-press-card-body p:last-child a {
+  color: rgb(42 211 155);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cards-press .cards-press-card-body p:last-child a:hover {
+  text-decoration: underline;
+}
+
+/* Reset EDS button styling if EDS decorates the link */
+main .cards-press .cards-press-card-body p.button-container {
+  margin: 0;
+  margin-top: auto;
+}
+
+main .cards-press .cards-press-card-body a.button:any-link {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: rgb(42 211 155);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: normal;
+  text-align: left;
+}
+
+main .cards-press .cards-press-card-body a.button:any-link:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
+  .cards-press > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-press > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

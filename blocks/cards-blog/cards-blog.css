@@ -1,27 +1,176 @@
+/* Block: cards-blog */
+
+/* Layout: Featured card (first) + Most Recent list cards */
+
 .cards-blog > ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .cards-blog > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
 }
 
-.cards-blog .cards-blog-card-body {
-  margin: 16px;
+/* --- Featured card (first item) --- */
+.cards-blog > ul > li:first-child {
+  margin-bottom: 20px;
 }
 
-.cards-blog .cards-blog-card-image {
+.cards-blog > ul > li:first-child .cards-blog-card-image {
+  line-height: 0;
+  margin-bottom: 16px;
+}
+
+.cards-blog > ul > li:first-child .cards-blog-card-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-blog > ul > li:first-child .cards-blog-card-body {
+  padding: 0;
+}
+
+.cards-blog > ul > li:first-child .cards-blog-card-body p {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(114 114 114);
+  margin: 0;
+  font-family: var(--body-font-family);
+}
+
+/* --- Most Recent cards (2nd onwards) --- */
+.cards-blog > ul > li:not(:first-child) {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 0 16px;
+  margin: 0 0 16px;
+  border-bottom: 1px solid rgb(238 238 238);
+}
+
+.cards-blog > ul > li:last-child {
+  border-bottom: none;
+}
+
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-image {
+  flex-shrink: 0;
   line-height: 0;
 }
 
-.cards-blog > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-image img {
+  width: 120px;
+  height: 80px;
   object-fit: cover;
+}
+
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 16px;
+}
+
+/* Title link */
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-body p:first-child {
+  margin: 0 0 8px;
+}
+
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-body p:first-child a {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  color: rgb(35 46 53);
+  font-family: var(--body-font-family);
+  text-decoration: none;
+}
+
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-body p:first-child a:hover {
+  color: var(--link-color);
+}
+
+/* Date paragraph (last p in card body) */
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-body p:last-child {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(114 114 114);
+  margin: 0;
+  font-family: var(--body-font-family);
+}
+
+/* Description paragraph */
+.cards-blog > ul > li:not(:first-child) .cards-blog-card-body p:not(:first-child, :last-child) {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(74 74 74);
+  margin: 0 0 8px;
+  font-family: var(--body-font-family);
+}
+
+/* Button reset - EDS auto-decorates links as buttons */
+.cards-blog a.button:any-link {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+  display: inline;
+  white-space: normal;
+}
+
+.cards-blog p.button-container {
+  margin: 0;
+}
+
+/* --- Desktop layout --- */
+@media (width >= 900px) {
+  .cards-blog > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0 40px;
+  }
+
+  /* Featured card spans the left column, all rows */
+  .cards-blog > ul > li:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 10;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards-blog > ul > li:first-child .cards-blog-card-image img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .cards-blog > ul > li:first-child .cards-blog-card-body p {
+    font-size: 16px;
+  }
+
+  /* Most recent cards in right column */
+  .cards-blog > ul > li:not(:first-child) {
+    grid-column: 2;
+    padding: 0 0 16px;
+    margin: 0 0 16px;
+  }
+
+  .cards-blog > ul > li:not(:first-child) .cards-blog-card-image img {
+    width: 160px;
+    height: 107px;
+  }
+
+  .cards-blog > ul > li:not(:first-child) .cards-blog-card-body {
+    padding-right: 20px;
+  }
 }
