@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-26T10:34:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.twistbioscience.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-category",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon image + title + description",
+    "buttonCount": 0,
+    "imageCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product category listings",
+      "service offerings with icons",
+      "feature grids with small images and descriptions"
+    ],
+    "notSuitableFor": [
+      "blog article listings",
+      "press/award sections",
+      "large photo card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-26T10:34:00.000Z"
+  }
+}

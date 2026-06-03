@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": ["https://www.twistbioscience.com/"],
+      "description": "Twist Bioscience homepage with hero, product categories, and promotional content",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [".homepageverticalcarousel"]
+        },
+        {
+          "name": "columns-promo",
+          "instances": [".cardlistingblock .column-control-container.sixty-forty"]
+        },
+        {
+          "name": "cards-product",
+          "instances": [".home-Page-our-products .column-control-container.three-column"]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [".TM-component-unleash-the-power .text-media-container"]
+        },
+        {
+          "name": "columns-testimonial",
+          "instances": [".TM-component-twist-at .text-media-container.reverse"]
+        },
+        {
+          "name": "cards-research",
+          "instances": [".bg-grey-cool .column-control-container.three-column"]
+        },
+        {
+          "name": "cards-blog",
+          "instances": [".featuredblogs .featured-blogs-section"]
+        },
+        {
+          "name": "cards-press",
+          "instances": [".home-Page-Press-and-Accolades .column-control-container.three-column"]
+        },
+        {
+          "name": "columns-cta",
+          "instances": [".TM-component-lets-start .text-media-container.text-media-banner"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": ".homepageverticalcarousel",
+          "style": "dark",
+          "blocks": ["carousel-hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Promotional Banner",
+          "selector": ".cardlistingblock .column-control-container.sixty-forty",
+          "style": "dark-teal",
+          "blocks": ["columns-promo"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Our Products",
+          "selector": ".home-Page-our-products",
+          "style": "grey",
+          "blocks": ["cards-product"],
+          "defaultContent": [".home-Page-our-products .card-listing-heading"]
+        },
+        {
+          "id": "section-4",
+          "name": "Unleash the Power of the Platform",
+          "selector": ".TM-component-unleash-the-power",
+          "style": null,
+          "blocks": ["columns-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Twist at Your Service",
+          "selector": ".TM-component-twist-at",
+          "style": null,
+          "blocks": ["columns-testimonial"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Powering Today's Research",
+          "selector": ".cardlistingblock.bg-grey-cool",
+          "style": "grey",
+          "blocks": ["cards-research"],
+          "defaultContent": [".cardlistingblock.bg-grey-cool .card-listing-heading"]
+        },
+        {
+          "id": "section-7",
+          "name": "Blog Section",
+          "selector": ".featuredblogs",
+          "style": null,
+          "blocks": ["cards-blog"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Press and Accolades",
+          "selector": ".home-Page-Press-and-Accolades",
+          "style": "grey",
+          "blocks": ["cards-press"],
+          "defaultContent": [".home-Page-Press-and-Accolades .card-listing-heading"]
+        },
+        {
+          "id": "section-9",
+          "name": "CTA Banner",
+          "selector": ".TM-component-lets-start",
+          "style": "dark",
+          "blocks": ["columns-cta"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

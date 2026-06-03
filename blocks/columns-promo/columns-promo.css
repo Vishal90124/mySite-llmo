@@ -1,0 +1,125 @@
+/* Block: columns-promo -- promotional banner with dark background, 60-40 layout */
+
+/* Source: rgb(13,66,109) bg, white/light text, outline CTA button */
+
+.columns-promo-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+  background-color: #0d426d;
+}
+
+.columns-promo {
+  color: #fff;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.columns-promo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columns-promo > div > div {
+  order: 1;
+  width: 100%;
+}
+
+.columns-promo > div > .columns-promo-img-col {
+  order: 0;
+  margin-bottom: 20px;
+}
+
+.columns-promo > div > .columns-promo-img-col picture {
+  display: block;
+}
+
+.columns-promo > div > .columns-promo-img-col img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+
+.columns-promo p {
+  font-size: 18px;
+  font-family: var(--heading-font-family);
+  line-height: 32px;
+  color: #cfdbdf;
+  margin: 0 0 10px;
+}
+
+.columns-promo p strong {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #fff;
+}
+
+.columns-promo a:any-link {
+  color: #cfdbdf;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  border: 2px solid #cfdbdf;
+  padding: 14px 28px;
+  display: inline-block;
+}
+
+.columns-promo a:any-link:hover {
+  background-color: rgb(255 255 255 / 10%);
+  color: #fff;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+main .columns-promo p.button-container {
+  margin-top: 20px;
+}
+
+main .columns-promo a.button:any-link {
+  background-color: transparent;
+  color: #cfdbdf;
+  padding: 14px 28px;
+  border: 2px solid #cfdbdf;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+main .columns-promo a.button:any-link:hover {
+  background-color: rgb(255 255 255 / 10%);
+  color: #fff;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .columns-promo {
+    padding: 0 32px;
+  }
+
+  .columns-promo > div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .columns-promo > div > div {
+    order: unset;
+  }
+
+  .columns-promo > div > div:first-child {
+    flex: 0 0 58%;
+    padding: 20px 0;
+  }
+
+  .columns-promo > div > .columns-promo-img-col {
+    flex: 0 0 40%;
+    margin-bottom: 0;
+  }
+}

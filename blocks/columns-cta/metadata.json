@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-26T10:34:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.twistbioscience.com/",
+    "originPage": "homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "cta-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image | heading + CTA button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "call-to-action banner sections",
+      "career recruitment sections",
+      "dark background CTA sections with image"
+    ],
+    "notSuitableFor": [
+      "light informational content",
+      "multi-paragraph text sections",
+      "product detail layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-26T10:34:00.000Z"
+  }
+}

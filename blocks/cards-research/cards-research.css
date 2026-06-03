@@ -1,0 +1,129 @@
+/* Block: cards-research */
+
+.cards-research > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.cards-research > ul > li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--background-color);
+  border: 1px solid rgb(0 0 0 / 17.6%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cards-research .cards-research-card-image {
+  line-height: 0;
+}
+
+.cards-research > ul > li img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.cards-research .cards-research-card-body {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards-research .cards-research-card-body p {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-family: var(--body-font-family);
+  line-height: 20px;
+  color: rgb(114 114 114);
+}
+
+/* Title (first p with strong) */
+.cards-research .cards-research-card-body p:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(49 53 56);
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.cards-research .cards-research-card-body p:first-child strong {
+  font-weight: 700;
+  color: rgb(49 53 56);
+}
+
+/* Category badge (p with em) */
+.cards-research .cards-research-card-body p:nth-child(2) em {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(16 89 40);
+  line-height: 22px;
+}
+
+/* Description paragraph */
+.cards-research .cards-research-card-body p:nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(114 114 114);
+  line-height: 20px;
+}
+
+/* Link paragraph - stretched to cover entire card for clickability */
+.cards-research .cards-research-card-body p:last-child a {
+  position: absolute;
+  inset: 0;
+  font-size: 0;
+  color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Reset EDS button styles on card links */
+.cards-research .cards-research-card-body .button-wrapper {
+  margin: 0;
+}
+
+.cards-research .cards-research-card-body a.button:any-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: transparent;
+  font-size: 0;
+  text-decoration: none;
+  white-space: normal;
+  z-index: 1;
+}
+
+.cards-research .cards-research-card-body a.button:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.cards-research > ul > li:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+@media (width >= 600px) {
+  .cards-research > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-research > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

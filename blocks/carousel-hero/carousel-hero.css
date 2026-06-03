@@ -1,0 +1,175 @@
+/* Block: carousel-hero -- vertical image/text carousel */
+
+/* Full-width wrapper override */
+.carousel-hero-wrapper {
+  max-width: 100% !important;
+}
+
+main .section:has(.carousel-hero) > div {
+  max-width: 100%;
+  padding: 0;
+}
+
+main .section:has(.carousel-hero) {
+  margin: 0;
+}
+
+.carousel-hero {
+  background-image: url("https://www.twistbioscience.com/content/dam/twist-aem-migration/bg-img.png");
+  background-size: cover;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  padding: 60px 24px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-hero .carousel-hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1170px;
+}
+
+/* Left column - images */
+.carousel-hero .carousel-hero-left {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 585 / 500;
+  overflow: hidden;
+  border-radius: 8px 8px 8px 80px;
+}
+
+.carousel-hero .carousel-hero-left .carousel-hero-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-hero .carousel-hero-left .carousel-hero-image.active {
+  opacity: 1;
+}
+
+.carousel-hero .carousel-hero-left .carousel-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 8px 80px;
+}
+
+/* Right column - text content */
+.carousel-hero .carousel-hero-right {
+  width: 100%;
+  padding: 0;
+  margin-top: 40px;
+}
+
+/* Heading: "WRITING THE FUTURE OF" */
+.carousel-hero .carousel-hero-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(255 255 255);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: var(--body-font-family);
+}
+
+/* Scrolling titles wrapper */
+.carousel-hero .carousel-hero-title-wrapper {
+  height: 112px;
+  overflow: hidden;
+}
+
+.carousel-hero .carousel-hero-title-track {
+  display: flex;
+  flex-direction: column;
+  transition: transform 400ms ease-out;
+}
+
+.carousel-hero .carousel-hero-title-item {
+  height: 112px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(35 46 53);
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  font-family: var(--body-font-family);
+  line-height: normal;
+}
+
+/* Description */
+.carousel-hero .carousel-hero-description {
+  font-size: 16px;
+  font-family: var(--body-font-family);
+  line-height: 24px;
+  color: rgb(255 255 255);
+  margin: 16px 0 40px;
+}
+
+/* CTA Button */
+.carousel-hero .button-container {
+  margin: 0;
+}
+
+.carousel-hero a.button:any-link {
+  background-color: rgb(255 255 255);
+  color: rgb(53 70 82);
+  padding: 12px 24px;
+  border: 1px solid rgb(255 255 255);
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.24px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.carousel-hero a.button:any-link:hover {
+  background-color: transparent;
+  color: rgb(255 255 255);
+  border-color: rgb(255 255 255);
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .carousel-hero {
+    padding: 60px 0;
+    min-height: 786px;
+  }
+
+  .carousel-hero .carousel-hero-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .carousel-hero .carousel-hero-left {
+    width: 50%;
+    max-width: none;
+    aspect-ratio: 585 / 554;
+  }
+
+  .carousel-hero .carousel-hero-right {
+    width: 50%;
+    padding: 0 48px;
+    margin-top: 0;
+  }
+
+  .carousel-hero .carousel-hero-heading {
+    margin-bottom: 32px;
+  }
+
+  .carousel-hero .carousel-hero-title-item {
+    font-size: 48px;
+  }
+}
